@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="feedback.css">
+    <title>Feedback Page</title>
+    <meta http-equiv='cache-control' content='no-cache'>
+    
+</head>
+
+<body class="body">
+
+    <header class="header">
+       <div class="head1">FEEDBACK</div>
+        <div class="head2">Your Thoughts Matter..!!</div>
+    </header>
+
+    <section class="section">
+        <nav class="nav">
+            <form action="" class="form">
+                <label>FIRST NAME* : <br><input type="text" id="fname" class="fld"/></label> <br><br>
+                <label>MIDDLE NAME : <br><input type="text" id="midname" placeholder="(Optional)" class="fld"/></label> <br><br>
+                <label>LAST NAME* : <br><input type="text" id="lastname" class="fld"/></label><br><br>
+                <label> SUGGESTIONS : <br><textarea rows="6" cols="35" name="feedback" id="t5" placeholder="Enter your feedback here...."></textarea></label><br>
+                <label>GENDER : <input type="radio" name="sex" value="Mr." id="male" checked><b>M</b>
+                <input type="radio" name="sex" value="Ms." id="female"><b>F</b>
+                </label><br><br>
+                <label>
+                    <input type="submit" value="Save" onclick='input(); return false' class="btn"/>
+                    <input type="submit" value="Reset" onclick="clear()" class="btn"/>
+                </label>
+            </form>
+        </nav>
+        <article class="feed">
+            <textarea cols="87" rows="32" id="mytest" maxlength="0" id="txt"></textarea>
+        </article>
+    </section>
+
+    <footer class="footer ">Designed by Alok kumar © 202120145</footer>
+	
+	<script>
+        function Clear() {
+            document.getElementById("fname").value = "";
+            document.getElementById("mname").value = "";
+            document.getElementById("lname").value = "";
+            document.querySelector('input[name="gender"]:checked').checked = false;
+            document.getElementById("sugges").value = "";
+        }
+
+        function input() {
+            var fname = document.getElementById("fname").value;
+            var midmame = document.getElementById("midname").value;
+            var lastname = document.getElementById("lastname").value;
+            var Gender = document.querySelector('input[name="sex"]:checked').value;
+
+            var feedback = document.getElementById("mytest").value;
+            var suggestion = document.getElementById("t5").value;
+            var d = new Date();
+            if (fname == "") {
+                alert("Please! give your first name. ");
+            } else if (lastname == "") {
+                alert("Please! give your last name. ");
+            } else if (suggestion == "") {
+                alert("Your feedback is important to us.\nPlease! give your feedback. ");
+            } else if (fname.length > 40 || midmame.length > 40 || lastname.length > 40) {
+                alert("Limit exceeded! Name should be less than 40 char");
+            } else {
+                if (midmame.trim() == "")
+                    name = Gender + " " + fname.trim() + " " + lastname.trim();
+                else {
+                    name = Gender + " " + fname.trim() + " " + midmame.trim() + " " + lastname.trim()
+                }
+                feedback += "\n" + "Name: " + name + "\n" + "Suggestion: " + suggestion + "\n" + d + "\n";
+                document.getElementById("mytest").value = feedback;
+            }
+        }
+    </script>
+	
+</body>
+
+</html>

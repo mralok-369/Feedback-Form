@@ -1,0 +1,86 @@
+body {
+	background-color: #8c8c8c;
+	font-family: cursive;
+}
+.header{
+	height: 80px;
+	width: 80%;
+	margin: auto;
+}
+.head1 {
+	background-color: skyblue;
+	width:40%;
+	height: 100%;
+	font-size:40px;
+	font-weight: bold;
+	text-align:center;
+	float:left;
+	margin: auto;
+}
+.head2 {
+	background-color: skyblue;
+	width:60%;
+	height: 100%;
+	font-size:40px;
+	font-weight: bold;
+	text-align:center;
+	float:left;
+	margin: auto;
+}
+.section {
+	background-color: pink;
+	height:500px;
+	width:80%;
+	margin: auto;
+}
+.nav {
+	background-color: pink;
+	width: 40%;
+	height: 500px;
+	float: left;
+	font-weight: bold;
+}
+label{
+	padding-left: 25px;
+	font-size: 18px;
+	
+}
+input {
+	height: 20px;
+	margin-left: 40px;
+	border: 2px solid black;
+}
+.fld {
+	width: 270px;
+	height: 35px;
+	border-radius: 15px;
+	background-color: #d9d9d9;
+	font-size: 16px;
+}
+#t5 {
+	margin-left: 40px;
+	border: 2px solid black;
+	border-radius: 15px;
+	background-color: #d9d9d9;
+}
+.btn {
+	width: 70px;
+	height: 35px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #d9d9d9;
+}
+#txt {
+	border: 1px solid black;
+	background-color: #d9d9d9;
+}
+.footer {
+	background-color: skyblue;
+	width: 80%;
+	height: 45px;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 10px;
+	font-weight: bold;
+	margin: auto;
+}
